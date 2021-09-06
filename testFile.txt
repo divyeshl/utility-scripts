@@ -1,0 +1,40 @@
+# 1) single line examples
+
+#    a) master get query
+$variable = gwwMasterGetQuery('SELECT filed FROM table where condition = 1');
+#    b) slave get query
+$variable = gwwSlaveGetQuery('SELECT filed FROM table where condition = 1');
+
+#    c) master set query
+#        -> if return value is expected
+#            - delete query
+$variable = gwwMasterSetQuery('DELETE FROM table where condition = 1');
+#            - update query
+$variable = gwwMasterSetQuery('UPDATE table SET variable where condition = 1');
+#            - insert query
+$variable = gwwMasterSetQuery('INSERT INTO table(a,s,p,l) VALUES(1,2,3,4)');
+
+#    d) master set query
+#        -> if return value is not expected
+#            - delete query
+gwwMasterSetQuery('DELETE FROM table where condition = 1');
+#            - update query
+gwwMasterSetQuery('UPDATE table SET variable where condition = 1');
+#            - insert query
+gwwMasterSetQuery('INSERT INTO table(a,s,p,l) VALUES(1,2,3,4)');
+
+# 2) multi line examples
+#     e) if return value is expected
+$variable = gwwMasterSetQuery('DELETE FROM table where condition = "where the condition is sooooo big that it has 
+            to be extented in second line or more"');
+#     f) if return value is not expected
+gwwMasterSetQuery('DELETE FROM table where condition = "where the condition is sooooo big that it has
+                   to be extented in second line or more"');
+
+# 3) other types of query
+$variable = gwwNettiXQuery('SQL QUERY', $siteCode);
+$variable = gwwNettiXSlaveQuery('SQL QUERY', $siteCode);
+$variable = gwwUserMasterGetQuery('SQL QUERY');
+$variable = gwwUserMasterSetQuery('SQL QUERY');
+$variable = gwwUserSlaveGetQuery('SQL QUERY');
+
