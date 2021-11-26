@@ -1,6 +1,3 @@
-# utility-scripts
-A repository for maintaining utility scripts helpful in various daily repetative tasks
-
 <br/><h3>PDO Convertor</h3>
 
 <br/>a) What is this?
@@ -22,7 +19,7 @@ A repository for maintaining utility scripts helpful in various daily repetative
 <br/>`cd ~/web`
 <br/>`git clone git@github.com:divyeshl/utility-scripts.git`
 2) Put the following alias in your ~/.bashrc as Permenant Alias
-<br/>`echo alias pdoConvertor2=\"perl \~/web/utility-scripts/pdoConvertor.pl\" >> ~/.bashrc`
+<br/>`echo alias pdoConvertor2=\"perl \~/web/utility-scripts/pdo-convertor/pdoConvertor.pl\" >> ~/.bashrc`
 
 <br/>d) Basic Tutorial
 1) Get full path of file and run the command (eg. /home/{USERNAME}/web/.../file.php) {Alt + Enter in Eclipse to get full file path}
